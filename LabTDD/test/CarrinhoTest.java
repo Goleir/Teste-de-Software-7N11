@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import labtdd.Carrinho;
 import labtdd.CarrinhoVazioExpected;
 import labtdd.Produto;
@@ -51,7 +52,15 @@ public class CarrinhoTest {
 		assertArrayEquals(new Object[] { original }, new Object[] { copia });
 	}
 
-        @Test void adicionandoProdutos() throws CarrinhoVazioExpected {
-            
+        @Test
+        public void listarProdutos() throws CarrinhoVazioExpected {
+                Produto original = new Produto("Java em 24 horas", 50.00);
+		carrinho.add(original);
+                
+                Produto deitel = new Produto("Java: como programar", 150.00);
+		carrinho.add(deitel);
+                
+                ArrayList<Produto> lista = new ArrayList<Produto>();
+                assertEquals(lista.getClass(), carrinho.getProdutos().getClass());
         }
 }
