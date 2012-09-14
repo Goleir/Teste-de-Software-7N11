@@ -1,11 +1,10 @@
 package labtdd;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class Carrinho {
 
-	private List<Produto> produtos;
+	private ArrayList<Produto> produtos;
 
 	public Carrinho() {
 		produtos = new ArrayList<Produto>();
@@ -25,5 +24,9 @@ public class Carrinho {
 		}
 		return menor;
 	}
+        
+        public ArrayList<Produto> getProdutos(){
+            return this.produtos;
+        }
 
 }
