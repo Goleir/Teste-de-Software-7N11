@@ -48,6 +48,7 @@ public class CarrinhoTest {
 		Produto original = new Produto("Java em 24 horas", 50.00);
 		carrinho.add(original);
 		Produto copia = new Produto("Java em 24 horas", 50.00);
+                
 		original = carrinho.menorProduto();
 		assertArrayEquals(new Object[] { original }, new Object[] { copia });
 	}
